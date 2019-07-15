@@ -1,0 +1,49 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Jungle Crew",
+      "description": "Making new friends is a wonderful thing. Should you have a lot in common with your new friend? Do you have to look the same? What happens when you look very different from each other?",
+      "images": [
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440503286l/26080836._SY475_.jpg"
+      ],
+      "authors": [1]
+    },
+    {
+      "id": 2,
+      "title": "Brave Like a Bee",
+      "description": "This entertaining picture book is about a bee and his friends.\nMany animals are bigger than the bee, but can they be just as brave?\nThis little bee gives his big friends a wise piece of advice about following their dreams.\nBut can they be brave enough to do it?",
+      "images": [
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1437996290l/25989492._SY475_.jpg"
+      ],
+      "authors": [1]
+    },
+    {
+      "id": 3,
+      "title": "An Agricultural Testament",
+      "description": "Howard's Agricultural Testament is a must-read for those interested in developing a more holistic approach to the soil and the life of the world dependent on it.",
+      "images": [
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1387712490l/19820445.jpg"
+      ],
+      "authors": [2]
+    },
+    {
+      "id": 4,
+      "title": "Head First Design Patterns",
+      "description": "At any given moment, somewhere in the world someone struggles with the same software design problems you have. You know you don't want to reinvent the wheel (or worse, a flat tire), so you look to Design Patterns--the lessons learned by those who've faced the same problems.",
+      "images": [
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1407489345l/9052963.jpg"
+      ],
+      "authors": [3, 4]
+    },
+    {
+      "id": 5,
+      "title": "OCP Java SE 8: Programmer II Exam Guide",
+      "description": "OCP Java SE 8: Programmer II Exam Guide",
+      "images": [
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1407489345l/9052963.jpg"
+      ],
+      "authors": [5, 6, 4]
+    }
+  ]
+}

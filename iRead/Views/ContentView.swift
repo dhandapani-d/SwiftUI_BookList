@@ -12,14 +12,17 @@ struct ContentView : View {
     @State private var selection = 0
  
     var body: some View {
-        TabbedView(selection: $selection){
-            Text("First View")
-                .font(.title)
-                .tabItemLabel(Image("first"))
-                .tag(0)
-            Text("Second View")
-                .font(.title)
-                .tabItemLabel(Image("second"))
+        TabbedView(){
+            Text("First")
+                .tabItem({
+                    Image(systemName:"list.dash")
+                    Text("My Books")
+                }).tag(0)
+            ProfileView()
+                .tabItem({
+                    Image(systemName: "person")
+                    Text("Profile")
+                })
                 .tag(1)
         }
     }

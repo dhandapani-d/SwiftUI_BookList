@@ -1,0 +1,28 @@
+{
+  "authors": [
+    {
+      "id": 1,
+      "name": "Emma Scott"
+    },
+    {
+      "id": 2,
+      "name": "Albert Howard"
+    },
+    {
+      "id": 3,
+      "name": "Eric Freeman"
+    },
+    {
+      "id": 4,
+      "name": "Elisabeth Robson"
+    },
+    {
+      "id": 5,
+      "name": "Kathy Sierra"
+    },
+    {
+      "id": 6,
+      "name": "Bert Bates"
+    }
+  ]
+}
