@@ -28,7 +28,10 @@ struct BookRow : View {
     var book: Book
     var body: some View {
         HStack {
-            Image(systemName: "book").frame(width: 60, height: 100)
+            BookCoverImageView(book: book, imageModel: ImageModel(path: book.images?.first))
+                .frame(width: 60, height: 100)
+                .padding(2)
+                .border(Color.gray)
             VStack(alignment: .leading, spacing: 4) {
                 Text(book.title)
                     .font(.headline)

@@ -16,7 +16,7 @@ import SwiftUI
 struct Book: Codable, Identifiable  {
     let id: Int
     let title, bookDescription: String
-    let images: [String]
+    let images: [String]?
     let authors: [Int]
     
     enum CodingKeys: String, CodingKey {
