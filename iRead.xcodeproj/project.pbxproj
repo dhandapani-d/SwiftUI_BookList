@@ -21,6 +21,7 @@
 		9A76638422D75B9E00058B10 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A76638322D75B9E00058B10 /* Book.swift */; };
 		9A76638622D7753E00058B10 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A76638522D7753D00058B10 /* Author.swift */; };
 		9A76638A22D7767700058B10 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A76638922D7767700058B10 /* ProfileView.swift */; };
+		AAD245CC22DDCC5D0039FDF5 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD245CB22DDCC5D0039FDF5 /* ToggleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		9A76638322D75B9E00058B10 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		9A76638522D7753D00058B10 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		9A76638922D7767700058B10 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		AAD245CB22DDCC5D0039FDF5 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				9A63171722DC761800C495AA /* MyBooksView.swift */,
 				9A63171922DCA91900C495AA /* BookDetailView.swift */,
 				9A63172122DCB37600C495AA /* BookCoverImageView.swift */,
+				AAD245CB22DDCC5D0039FDF5 /* ToggleButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				9A76636E22D74AD800058B10 /* AppDelegate.swift in Sources */,
 				9A76637022D74AD800058B10 /* SceneDelegate.swift in Sources */,
 				9A63172222DCB37600C495AA /* BookCoverImageView.swift in Sources */,
+				AAD245CC22DDCC5D0039FDF5 /* ToggleButton.swift in Sources */,
 				9A76637222D74AD800058B10 /* ContentView.swift in Sources */,
 				9A76638622D7753E00058B10 /* Author.swift in Sources */,
 				9A63171822DC761800C495AA /* MyBooksView.swift in Sources */,

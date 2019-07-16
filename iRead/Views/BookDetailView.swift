@@ -27,8 +27,7 @@ struct BookDetailView : View {
                 .frame(width:UIScreen.main.bounds.width, height: 200.0).aspectRatio(contentMode: .fill)
             Text(book.bookDescription).font(.body).lineLimit(nil).padding(4)
             Section{
-                Toggle(isOn: $book.isFavorite){
-                    Text("Is Favorite Book?") }
+                ToggleButton(isOn: $book.isFavorite)
             }
             
             if book.isFavorite {
