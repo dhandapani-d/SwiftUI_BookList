@@ -9,17 +9,8 @@
 import SwiftUI
 
 struct BookDetailView : View {
-    @State var book: Book
-    @State var isFavorite:Bool = false
-    @State var isOwned:Bool = false {
-        didSet{
-            toggleChanged()
-        }
-    }
-    
-    func toggleChanged(){
-        print("toggle changed")
-    }
+    @ObjectBinding var book: Book
+
     var body: some View {
         Form {
             Text(book.title).font(.title).lineLimit(nil).padding(4)
@@ -27,8 +18,7 @@ struct BookDetailView : View {
                 .frame(width:UIScreen.main.bounds.width, height: 200.0).aspectRatio(contentMode: .fill)
             Text(book.bookDescription).font(.body).lineLimit(nil).padding(4)
             Section{
-                Toggle(isOn: $book.isFavorite){
-                    Text("Is Favorite Book?") }
+                ToggleButton(isOn: $book.isFavorite)
             }
             
             if book.isFavorite {
