@@ -31,10 +31,18 @@ enum ReadOptions:CaseIterable{
 
 class Book: Codable, Identifiable, BindableObject  {
     let id: Int
-    let title, bookDescription: String
-    let images: [String]?
-    let authors: [Int]
-    var isFavorite : Bool{
+    var title: String {
+        didSet {
+            DispatchQueue.main.async {
+                self.didChange.send()
+            }
+        }
+    }
+    var bookDescription: String
+
+    let images: [String]? = nil
+    let authors: [Int]? = nil 
+    var isFavorite : Bool = false {
         didSet{
             DispatchQueue.main.async {
                 self.didChange.send()
@@ -42,8 +50,14 @@ class Book: Codable, Identifiable, BindableObject  {
         }
     }
     
+    init(id: Int, title: String, description: String) {
+        self.id = id
+        self.title = title
+        self.bookDescription = description
+    }
     
-    var isRead: ReadOptions = .unread{
+    
+    var isRead: ReadOptions = .unread {
         didSet{
             DispatchQueue.main.async {
                 self.didChange.send()

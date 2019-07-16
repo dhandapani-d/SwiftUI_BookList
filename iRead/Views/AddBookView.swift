@@ -7,17 +7,35 @@
 //
 
 import SwiftUI
+import Combine
 
 struct AddBookView : View {
+    @State var title:String = ""
+    @State var description: String = "Lorem"
+    
+    func addBook() {
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Add Book")
+            Form {
+                Section {
+                    TextField("Book Title", text:$title)
+                    TextArea(text: $description)
+                }
+                Section {
+                    Button("Add Book", action: addBook)
+                }
+            }
+        }
     }
 }
 
 #if DEBUG
 struct AddBookView_Previews : PreviewProvider {
     static var previews: some View {
-        AddBookView()
+        return AddBookView()
     }
 }
 #endif

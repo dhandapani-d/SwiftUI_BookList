@@ -19,6 +19,10 @@ struct MyBooksView : View {
                 }
             }
             .navigationBarTitle(Text("My Books"), displayMode: .large)
+            .navigationBarItems(trailing:
+                PresentationLink(destination: AddBookView(), label: {
+                    Text("Add")
+                }))
         }
     }
 }
