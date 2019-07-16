@@ -14,7 +14,7 @@ struct MyBooksView : View {
     var body: some View {
         NavigationView {
             List(books) { book in
-                NavigationLink(destination: Text("Book Details")) {
+                NavigationLink(destination: BookDetailView(book: book)) {
                     BookRow(book: book)
                 }
             }
@@ -25,7 +25,7 @@ struct MyBooksView : View {
 
 
 struct BookRow : View {
-    var book: Book
+    @State var book: Book
     var body: some View {
         HStack {
             BookCoverImageView(book: book, imageModel: ImageModel(path: book.images?.first))
@@ -38,6 +38,10 @@ struct BookRow : View {
                 Text(book.bookDescription)
                     .font(.body)
                     .lineLimit(3)
+                Text(book.isFavorite ? "Yes" : "No")
+                Toggle(isOn: $book.isFavorite){
+                    Text("Is Favorite Book?")
+                }
             }
         }
     }

@@ -6,23 +6,33 @@
 //  Copyright © 2019 imaginea. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import SwiftUI
+import Combine
 
 
 
 // MARK: - Book
-struct Book: Codable, Identifiable  {
+class Book: Codable, Identifiable, BindableObject  {
     let id: Int
     let title, bookDescription: String
     let images: [String]?
     let authors: [Int]
+    var isFavorite : Bool{
+        didSet{
+            DispatchQueue.main.async {
+                self.didChange.send()
+            }
+        }
+    }
+    let didChange = PassthroughSubject<Void, Never>()
+    
     
     enum CodingKeys: String, CodingKey {
         case id, title
         case bookDescription = "description"
         case images, authors
+        case isFavorite
     }
 }
 

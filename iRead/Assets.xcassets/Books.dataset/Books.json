@@ -7,7 +7,8 @@
       "images": [
         "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1440503286l/26080836._SY475_.jpg"
       ],
-      "authors": [1]
+      "authors": [1],
+      "isFavorite": false
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "images": [
         "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1437996290l/25989492._SY475_.jpg"
       ],
-      "authors": [1]
+      "authors": [1],
+      "isFavorite": false
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "images": [
         "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1387712490l/19820445.jpg"
       ],
-      "authors": [2]
+      "authors": [2],
+      "isFavorite": true
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "images": [
         "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1407489345l/9052963.jpg"
       ],
-      "authors": [3, 4]
+      "authors": [3, 4],
+      "isFavorite": false
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "images": [
         "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1407489345l/9052963.jpg"
       ],
-      "authors": [5, 6, 4]
+      "authors": [5, 6, 4],
+      "isFavorite": false
     }
   ]
 }
