@@ -33,15 +33,16 @@ struct BookRow : View {
                 .padding(2)
                 .border(Color.gray)
             VStack(alignment: .leading, spacing: 4) {
-                Text(book.title)
-                    .font(.headline)
+                HStack(){
+                    Text(book.title)
+                        .font(.headline)
+                     Image(systemName: book.isFavorite ? "heart.circle.fill" : "heart.circle").resizable().frame(width:30,height:30)
+                }
+                
                 Text(book.bookDescription)
                     .font(.body)
                     .lineLimit(3)
-                Text(book.isFavorite ? "Yes" : "No")
-                Toggle(isOn: $book.isFavorite){
-                    Text("Is Favorite Book?")
-                }
+               
             }
         }
     }
