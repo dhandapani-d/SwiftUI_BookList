@@ -40,7 +40,7 @@ class Book: Codable, Identifiable, BindableObject  {
     }
     var bookDescription: String
 
-    let images: [String]? = nil
+    let images: [String]?
     let authors: [Int]? = nil 
     var isFavorite : Bool = false {
         didSet{
@@ -54,6 +54,7 @@ class Book: Codable, Identifiable, BindableObject  {
         self.id = id
         self.title = title
         self.bookDescription = description
+        self.images = nil
     }
     
     
@@ -80,8 +81,25 @@ class Book: Codable, Identifiable, BindableObject  {
 
 let booksData = getData();
 
-struct Books: Codable {
-    let books: [Book]
+class Books: Codable,BindableObject {
+    
+    var didChange = PassthroughSubject<Void, Never>()
+    
+    var books:[Book] = [Book]() {
+        didSet{
+            DispatchQueue.main.async {
+                self.didChange.send()
+            }
+        }
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case books
+    }
+    
+    init() {
+        books = booksData!;
+    }
 }
 
 func getData() -> [Book]? {

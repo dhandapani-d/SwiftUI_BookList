@@ -13,7 +13,7 @@ struct ContentView : View {
  
     var body: some View {
         TabbedView(){
-            MyBooksView(books: booksData!)
+            ProfileView()
                 .tabItem({
                     Image(systemName:"list.dash")
                     Text("My Books")

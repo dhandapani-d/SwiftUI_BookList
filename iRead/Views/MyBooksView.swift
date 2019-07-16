@@ -9,20 +9,28 @@
 import SwiftUI
 
 struct MyBooksView : View {
-    var books:[Book] = []
+    
+    @EnvironmentObject var books: Books
+    @State var showAddBookModal:Bool = false
     
     var body: some View {
         NavigationView {
-            List(books) { book in
+            List(books.books) { book in
                 NavigationLink(destination: BookDetailView(book: book)) {
                     BookRow(book: book)
                 }
             }
             .navigationBarTitle(Text("My Books"), displayMode: .large)
-            .navigationBarItems(trailing:
-                PresentationLink(destination: AddBookView(), label: {
-                    Text("Add")
-                }))
+                .navigationBarItems(trailing:
+                    Button(action: {
+                        self.showAddBookModal.toggle()
+                    }, label: {
+                        Image(systemName:"plus.circle.fill").resizable().frame(width:30,height:30).foregroundColor(Color.red)
+                    })
+            ).presentation(showAddBookModal ? Modal(AddBookView(isPresented: $showAddBookModal).environmentObject(books),
+                                                    onDismiss: {
+                                                        self.showAddBookModal = false
+            }):nil)
         }
     }
 }
@@ -62,8 +70,9 @@ struct BookRow : View {
 
 #if DEBUG
 struct MyBooksView_Previews : PreviewProvider {
+    static var books = Books()
     static var previews: some View {
-        MyBooksView(books: booksData!)
+        MyBooksView().environmentObject(books)
     }
 }
 #endif
