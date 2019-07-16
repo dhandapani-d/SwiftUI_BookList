@@ -42,7 +42,7 @@ struct BookRow : View {
                         Image(systemName:"heart.circle.fill").resizable().frame(width:30,height:30).foregroundColor(Color.red)
                     }
                     if book.isRead != .unread{
-                        Image(systemName: (book.isRead == .read) ? "bookmark.fill" : "bookmark" ).foregroundColor(Color.red)
+                        Image(systemName: (book.isRead == .read) ? "bookmark.fill" : "clock" ).resizable().frame(width:25,height:25).foregroundColor(Color.red)
                     }
                     
                 }
