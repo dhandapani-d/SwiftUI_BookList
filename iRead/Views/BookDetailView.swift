@@ -32,18 +32,25 @@ struct BookDetailView : View {
             }
             
             if book.isFavorite {
-            Section{
-                Toggle(isOn: $isOwned){
-                    Text("Do you own this book?") }
-            }
+                Section{
+                    
+                    Picker(
+                        selection: $book.isRead,
+                        label: Text("Reading Status")
+                    ) {
+                        ForEach(ReadOptions.allCases.identified(by: \.self)) {
+                            Text($0.description()).tag($0)
+                        }
+                    }
+                }
             }
         }.navigationBarTitle(Text(book.title), displayMode: .inline)    }
 }
 
 #if DEBUG
-//struct BookDetailView_Previews : PreviewProvider {
-//    static var previews: some View {
-//        BookDetailView(book: booksData![0])
-//    }
-//}
+struct BookDetailView_Previews : PreviewProvider {
+    static var previews: some View {
+        BookDetailView(book: booksData![0])
+    }
+}
 #endif

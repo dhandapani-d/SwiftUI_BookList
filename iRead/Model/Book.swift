@@ -13,6 +13,22 @@ import Combine
 
 
 // MARK: - Book
+
+enum ReadOptions:CaseIterable{
+    case unread
+    case read
+    case inProgress
+    
+    func description() -> String{
+        switch(self){
+        case .unread: return "Unread"
+        case .read: return "Read"
+        case .inProgress: return "In Progress"
+        }
+    }
+}
+
+
 class Book: Codable, Identifiable, BindableObject  {
     let id: Int
     let title, bookDescription: String
@@ -25,6 +41,16 @@ class Book: Codable, Identifiable, BindableObject  {
             }
         }
     }
+    
+    
+    var isRead: ReadOptions = .unread{
+        didSet{
+            DispatchQueue.main.async {
+                self.didChange.send()
+            }
+        }
+    }
+    
     let didChange = PassthroughSubject<Void, Never>()
     
     
