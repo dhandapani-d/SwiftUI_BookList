@@ -9,17 +9,8 @@
 import SwiftUI
 
 struct BookDetailView : View {
-    @State var book: Book
-    @State var isFavorite:Bool = false
-    @State var isOwned:Bool = false {
-        didSet{
-            toggleChanged()
-        }
-    }
-    
-    func toggleChanged(){
-        print("toggle changed")
-    }
+    @ObjectBinding var book: Book
+
     var body: some View {
         Form {
             Text(book.title).font(.title).lineLimit(nil).padding(4)
