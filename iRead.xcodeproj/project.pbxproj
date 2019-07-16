@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A2B86CF22DCC86C0021633F /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A63171F22DCAE7200C495AA /* ImageModel.swift */; };
+		9A2B86D122DDD3430021633F /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2B86D022DDD3430021633F /* AddBookView.swift */; };
 		9A63171822DC761800C495AA /* MyBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A63171722DC761800C495AA /* MyBooksView.swift */; };
 		9A63171A22DCA91900C495AA /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A63171922DCA91900C495AA /* BookDetailView.swift */; };
 		9A63171D22DCACCD00C495AA /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A63171C22DCACCD00C495AA /* ImageService.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A2B86D022DDD3430021633F /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		9A63171722DC761800C495AA /* MyBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksView.swift; sourceTree = "<group>"; };
 		9A63171922DCA91900C495AA /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 		9A63171C22DCACCD00C495AA /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				9A76638922D7767700058B10 /* ProfileView.swift */,
 				9A63171722DC761800C495AA /* MyBooksView.swift */,
 				9A63171922DCA91900C495AA /* BookDetailView.swift */,
+				9A2B86D022DDD3430021633F /* AddBookView.swift */,
 				9A63172122DCB37600C495AA /* BookCoverImageView.swift */,
 			);
 			path = Views;
@@ -209,6 +212,7 @@
 				9A76636E22D74AD800058B10 /* AppDelegate.swift in Sources */,
 				9A76637022D74AD800058B10 /* SceneDelegate.swift in Sources */,
 				9A63172222DCB37600C495AA /* BookCoverImageView.swift in Sources */,
+				9A2B86D122DDD3430021633F /* AddBookView.swift in Sources */,
 				9A76637222D74AD800058B10 /* ContentView.swift in Sources */,
 				9A76638622D7753E00058B10 /* Author.swift in Sources */,
 				9A63171822DC761800C495AA /* MyBooksView.swift in Sources */,
