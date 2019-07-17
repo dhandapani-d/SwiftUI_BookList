@@ -30,6 +30,9 @@ enum ReadOptions:CaseIterable{
 
 
 class Book: Codable, Identifiable, BindableObject  {
+    
+    let didChange = PassthroughSubject<Void, Never>()
+
     let id: Int
     var title: String {
         didSet {
@@ -66,7 +69,6 @@ class Book: Codable, Identifiable, BindableObject  {
         }
     }
     
-    let didChange = PassthroughSubject<Void, Never>()
     
     
     enum CodingKeys: String, CodingKey {
@@ -77,11 +79,10 @@ class Book: Codable, Identifiable, BindableObject  {
     }
 }
 
-#if DEBUG
 
 let booksData = getData();
 
-class Books: Codable,BindableObject {
+class BooksManager: Codable,BindableObject {
     
     var didChange = PassthroughSubject<Void, Never>()
     
@@ -108,7 +109,7 @@ func getData() -> [Book]? {
     }
     do {
         let decoder = JSONDecoder()
-        let books = try decoder.decode(Books.self, from: asset.data)
+        let books = try decoder.decode(BooksManager.self, from: asset.data)
         print(books)
         return books.books
     } catch _ {
@@ -116,4 +117,3 @@ func getData() -> [Book]? {
     }
 }
 
-#endif

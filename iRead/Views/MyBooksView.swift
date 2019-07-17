@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MyBooksView : View {
     
-    @EnvironmentObject var books: Books
+    @EnvironmentObject var books: BooksManager
     @State var showAddBookModal:Bool = false
     
     var body: some View {
@@ -37,9 +37,9 @@ struct MyBooksView : View {
 
 
 struct BookRow : View {
-    @State var book: Book
+    @ObjectBinding var book: Book
     var body: some View {
-        HStack {
+        HStack(alignment: .center, spacing: 10) {
             BookCoverImageView(book: book, imageModel: ImageModel(path: book.images?.first))
                 .frame(width: 60, height: 100)
                 .padding(2)
@@ -70,7 +70,7 @@ struct BookRow : View {
 
 #if DEBUG
 struct MyBooksView_Previews : PreviewProvider {
-    static var books = Books()
+    static var books = BooksManager()
     static var previews: some View {
         MyBooksView().environmentObject(books)
     }
